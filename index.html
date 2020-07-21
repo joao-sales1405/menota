@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script>
+        function alertar(){
+            alert("Parabéns!Você está logado.")
+        }
+    </script>
 </head>
 <body>
     <h1>Login</h1>
-    <p>Digite o seu email:</p>
-    <input type="email"/>
-    <p>Digite sua senha:</p>
-    <input type="password"/>
-    <button type="button">Enter</button>
+    <div>
+        <input type="email" placeholder="Email:"/>
+    </div>
+    <div>
+        <input type="password" placeholder="Password:"/>
+    </div>
+    <div>
+        <button type="button" onclick={alertar()}>Enter</button>
+    </div>
 </body>
 </html>
