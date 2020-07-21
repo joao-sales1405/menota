@@ -6,20 +6,30 @@
     <title>Login</title>
     <script>
         function alertar(event){
-            console.log(event.target)
+            event.preventDefault();
+            const logar = {
+                email: event.target.children[0].children[0].value,
+                senha: event.target.children[1].children[0].value
+            }
+
+            alert(logar.senha)
+            alert(logar.email)
+            
         }
     </script>
 </head>
 <body>
     <h1>Login</h1>
-    <div>
-        <input type="email" placeholder="Email:"/>
-    </div>
-    <div>
-        <input type="password" placeholder="Password:"/>
-    </div>
-    <div>
-        <button type="button" onclick={alertar(event)}>Enter</button>
-    </div>
+    <form onsubmit="alertar(event)">
+        <div>
+            <input type="email" placeholder="Email:"/>
+        </div>
+        <div>
+            <input type="password" placeholder="Password:"/>
+        </div>
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
 </body>
 </html>
