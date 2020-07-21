@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script>
-        function alertar(){
-            alert("Parabéns!Você está logado.")
+        function alertar(event){
+            console.log(event.target)
         }
     </script>
 </head>
@@ -19,7 +19,7 @@
         <input type="password" placeholder="Password:"/>
     </div>
     <div>
-        <button type="button" onclick={alertar()}>Enter</button>
+        <button type="button" onclick={alertar(event)}>Enter</button>
     </div>
 </body>
 </html>
